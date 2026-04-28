@@ -66,8 +66,8 @@ Example:
 •	Tablet manufacturing process consistently producing correct dosage and quality
 
 🔍 Key Difference (Simple Way to Remember)
-•	Qualification = “The tool works”
-•	Validation = “The process using the tool works”
+•	Qualification = “The **tool** works”
+•	Validation = “The **process** using the tool works”
 
 🧩 How They Fit Together
 Qualification is actually a subset of validation:
