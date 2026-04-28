@@ -161,7 +161,7 @@ Today, the V-Diagram is widely adopted in various industrial sectors and remains
 <div align="center">
   <img src="./img/V_Diagram.png" 
        alt="V-Diagram"
-       width="700">
+       width="600">
   <p><em>Representation of the V-Diagram</em></p>
 </div>
 
@@ -380,7 +380,7 @@ style FS fill:#b6e0fc,stroke:#333,color:#222
 style DS fill:#fff9b6,stroke:#333,color:#222
 ```
 
-**They will be validated by an Installation Qualification (IQ) procedure.
+They will be validated by an **Installation Qualification**, **IQ**, procedure.
 
 In practice, we mainly refer to **DS**, which can be divided into **HDS** and **SDS**.
 
@@ -449,7 +449,7 @@ Attached to the documentation is the file used to generate the two examples abov
 ## Tests
 
 **Anticipate testing**
-LTest plans should be written before the machine is built. This is an advantage for engineers because they know in advance how their work will be tested.
+Test plans should be written before the machine is built. This is an advantage for engineers because they know in advance how their work will be tested.
 
 In a validation project, test plans or test protocols are used to demonstrate that a system meets the requirements previously established in the specification, design, and configuration documents.
 
@@ -611,6 +611,7 @@ style PQ fill:#b6fce5,stroke:#333,color:#222
 ```
 
 **Important for the engineer:** to obtain **final** acceptance of the machine from the client. Any subsequent modifications will be subject to negotiation and can more easily be considered an extension of the mandate.
+
 <div style="font-weight: bold;" align="center">
   Have your client validate and sign the machine acceptance; this will protect you against any further modification requests.
 </div>
@@ -710,5 +711,6 @@ Here is the list of documents to provide.
 - [ ] FMEA
 
 
+If you missed the link in the text, [here's a short example of what an AI can do to define a Functional Specification](FS_TheUserMustBeAbleToSaveTheVariousMeasuredCalues.md), **FS**, from a User Request Specification, **URS**,. Since it essentially generates text, this tool works surprisingly well for this type of task. It saves valuable time. When it does not replace **FS** by File System and URS by User Status Report...  :laughing:
 
 <!-- end of document -->
