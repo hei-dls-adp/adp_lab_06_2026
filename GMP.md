@@ -328,19 +328,18 @@ The Functional Specification (FS) is primarily the engineer's work. It describes
 
 ```mermaid
 flowchart LR
-    A [Automatic Mode] --> B [Normal State]
-    B --> B1 [The valves remain closed as long as the system is in a state other than Starting and no H2 gas detection is reported.]
-    A --> C [H2 Gas Detection]
-    C --> C1 [The sensor detects an H2 concentration exceeding the configured threshold]
-    C1 --> C2 [The valves close immediately]
-    C2 --> C3 [A Stop level alarm is activated]
-    C3 --> C4 [The H2 concentration level is displayed for information]
-    A --> D [Transition to Starting State]
-    D --> D1 [The valves open automatically to allow system operation]
-    A --> E [H2 Detection Threshold]
-    E --> E1 [The threshold is configurable between 0% and 10%]
-    F [Manual Mode] --> G [Manual Valve Opening]
-    G --> G1 [In manual mode, the valves can be activated from the user interface if the Stopped state of the PackML is reached]
+    A[Automatic Mode] --> B[Normal State]
+    A --> C[H2 Gas Detection]
+    C --> C1[The sensor detects an H2 concentration exceeding the configured threshold]
+    C1 --> C2[The valves close immediately]
+    C2 --> C3[A Stop level alarm is activated]
+    C3 --> C4[The H2 concentration level is displayed for information]
+    A --> D[Transition to Starting State]
+    D --> D1[The valves open automatically to allow system operation]
+    A --> E[H2 Detection Threshold]
+    E --> E1[The threshold is configurable between 0% and 10%]
+    F[Manual Mode] --> G[Manual Valve Opening]
+    G --> G1[In manual mode, the valves can be activated from the user interface if the Stopped state of the PackML is reached]
 ```
 
 
