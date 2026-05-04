@@ -1,0 +1,63 @@
+{
+  "IsSynced": false,
+  "SyncMode": 0,
+  "InSyncWithRuntime": true,
+  "ApplicationType": "plc",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "c8b7c6a6-66b3-429e-9f40-b2a3021c8fcb",
+  "LastChange": 639135023488657623,
+  "MachineName": "VS-W08453",
+  "UserName": "cedric.lenoir",
+  "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\Adp\\Adp_Plc_06\\Adp_lab_06_Robot_v_3_6.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 20,
+    "Revision": 60,
+    "MajorRevision": 0,
+    "MinorRevision": 60
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX PLC 3.6.3",
+  "ProductId": "ctrlx-plc-engineering",
+  "ProductVersion": "3.6.3",
+  "ProductVersionText": "3.6.3",
+  "SyncModeSave": false,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "SyncOnOpen": false,
+  "UserMetaData": {
+    "VS-W08453:cedric.lenoir": {
+      "MachineName": "VS-W08453",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\Adp\\Adp_Plc_06\\Adp_lab_06_Robot_v_3_6.project"
+    },
+    "VS-W11474:cedric.lenoir": {
+      "MachineName": "VS-W11474",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\Adp\\Lab_PLC_06_New\\Adp_lab_06_Robot_v_3_6.project"
+    },
+    "VS-W08514:cedric.lenoir": {
+      "MachineName": "VS-W08514",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\AAut\\PLC_ABox_OO\\CtrlX_2026_ABoxBase.project"
+    }
+  },
+  "CompileinfoChecksum": {
+    "b0264aff-d2a0-4da7-bb5e-931fd83bdeca": 637941273
+  },
+  "SyncDescription": false,
+  "DeviceId": "1001 0080",
+  "DeviceVersion": "3.6.3.0",
+  "UseIoHierachy": true
+}
