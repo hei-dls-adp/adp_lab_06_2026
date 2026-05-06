@@ -652,7 +652,9 @@
             "921dd69c2483a6e3",
             "4a7403fe7019f30f",
             "48372f31472ff0fa",
-            "90a5c9d02b055a8b"
+            "90a5c9d02b055a8b",
+            "5ce4859fdd49db5f",
+            "7d52a4ba16da2760"
         ],
         "x": 54,
         "y": 559,
@@ -1175,12 +1177,14 @@
             "acf520c254baa0a3",
             "b1e6a763c9078a68",
             "bae814aaa425b6d5",
-            "7c42697278cbbfbf"
+            "7c42697278cbbfbf",
+            "fa26ac7731785cc0",
+            "5a96eeeeda73ba2f"
         ],
         "x": 34,
         "y": 1199,
         "w": 872,
-        "h": 322
+        "h": 382
     },
     {
         "id": "8c1edaf6ffe838c7",
@@ -1599,7 +1603,7 @@
         "page": "66c6923e3822666a",
         "width": "6",
         "height": "1",
-        "order": 2,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1663,7 +1667,7 @@
         "page": "66c6923e3822666a",
         "width": "6",
         "height": "1",
-        "order": 3,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -6118,10 +6122,7 @@
         "g": "0bdb5ec762c4f53c",
         "name": "Start Linear",
         "mode": "link",
-        "links": [
-            "67ce856367310f5e",
-            "06854f7db0db5400"
-        ],
+        "links": [],
         "x": 365,
         "y": 1080,
         "wires": []
@@ -6133,10 +6134,7 @@
         "g": "1ba6b4f70874df7a",
         "name": "Start Pick",
         "mode": "link",
-        "links": [
-            "881cc231027dcc49",
-            "85fed93b23877678"
-        ],
+        "links": [],
         "x": 335,
         "y": 1720,
         "wires": []
@@ -9373,8 +9371,8 @@
         "y": 1420,
         "wires": [
             [
-                "acf520c254baa0a3",
-                "bae814aaa425b6d5"
+                "5a96eeeeda73ba2f",
+                "acf520c254baa0a3"
             ]
         ]
     },
@@ -9384,7 +9382,7 @@
         "z": "016306c2d57be25e",
         "g": "e4bb8adf906ca572",
         "name": "Amount Errors",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9392,8 +9390,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1420,
+        "x": 760,
+        "y": 1540,
         "wires": []
     },
     {
@@ -9490,6 +9488,45 @@
         ]
     },
     {
+        "id": "fa26ac7731785cc0",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "016306c2d57be25e",
+        "g": "e4bb8adf906ca572",
+        "subscription": "c5b0190b901ecb86",
+        "path": "diagnosis/get/actual/list/amount-errors",
+        "name": "",
+        "inputs": 0,
+        "x": 410,
+        "y": 1500,
+        "wires": [
+            [
+                "acf520c254baa0a3",
+                "5a96eeeeda73ba2f"
+            ]
+        ]
+    },
+    {
+        "id": "5a96eeeeda73ba2f",
+        "type": "function",
+        "z": "016306c2d57be25e",
+        "g": "e4bb8adf906ca572",
+        "name": "Big Int",
+        "func": "var fromBigInt;\nfromBigInt = msg.payload.value.toString();\nmsg.payload = fromBigInt;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1420,
+        "wires": [
+            [
+                "bae814aaa425b6d5"
+            ]
+        ]
+    },
+    {
         "id": "662d744927a7778b",
         "type": "inject",
         "z": "ab5dcf8839791074",
@@ -9525,13 +9562,13 @@
         "z": "ab5dcf8839791074",
         "g": "d6d35040f860a3cf",
         "name": "",
-        "filename": "C:\\Users\\cedric.lenoir\\Documents\\AutRob\\NodeOneShotBasler.py",
+        "filename": "C:\\Users\\cedric.lenoir\\Documents\\Adp\\NodeOneShotBasler.py",
         "filenameType": "str",
         "appendNewline": true,
-        "createDir": false,
+        "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 680,
+        "x": 670,
         "y": 100,
         "wires": [
             [
@@ -9581,7 +9618,7 @@
         "type": "exec",
         "z": "ab5dcf8839791074",
         "g": "d6d35040f860a3cf",
-        "command": "python C:\\Users\\cedric.lenoir/Documents/AutRob/NodeOneShotBasler.py -u",
+        "command": "python C:\\Users\\cedric.lenoir/Documents/Adp/NodeOneShotBasler.py -u",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -9589,7 +9626,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 560,
+        "x": 550,
         "y": 320,
         "wires": [
             [
@@ -9745,13 +9782,13 @@
         "z": "ab5dcf8839791074",
         "g": "92d44b9a0ccc0d5d",
         "name": "",
-        "filename": "C:\\Users\\cedric.lenoir\\Documents\\AutRob\\NodeUpdateBasler.py",
+        "filename": "C:\\Users\\cedric.lenoir\\Documents\\Adp\\NodeUpdateBasler.py",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 670,
+        "x": 660,
         "y": 600,
         "wires": [
             [
@@ -9801,7 +9838,7 @@
         "type": "exec",
         "z": "ab5dcf8839791074",
         "g": "92d44b9a0ccc0d5d",
-        "command": "python C:\\Users\\cedric.lenoir/Documents/AutRob/NodeUpdateBasler.py -u",
+        "command": "python C:\\Users\\cedric.lenoir/Documents/Adp/NodeUpdateBasler.py -u",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -9809,7 +9846,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 540,
+        "x": 530,
         "y": 820,
         "wires": [
             [
@@ -10005,13 +10042,13 @@
         "z": "ab5dcf8839791074",
         "g": "0146b7185c7cf9ab",
         "name": "",
-        "filename": "C:\\Users\\cedric.lenoir\\Documents\\AutRob\\NodeOneShotBaslerXYZ.py",
+        "filename": "C:\\Users\\cedric.lenoir\\Documents\\Adp\\NodeOneShotBaslerXYZ.py",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 690,
+        "x": 680,
         "y": 1020,
         "wires": [
             [
@@ -10062,7 +10099,7 @@
         "type": "exec",
         "z": "ab5dcf8839791074",
         "g": "0146b7185c7cf9ab",
-        "command": "python -u C:/Users/cedric.lenoir/Documents/AutRob/NodeOneShotBaslerXYZ.py",
+        "command": "python -u C:/Users/cedric.lenoir/Documents/Adp/NodeOneShotBaslerXYZ.py",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
@@ -10070,7 +10107,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 500,
+        "x": 490,
         "y": 1300,
         "wires": [
             [
@@ -10803,6 +10840,49 @@
         "wires": [
             [
                 "177a6e1494048366"
+            ]
+        ]
+    },
+    {
+        "id": "5ce4859fdd49db5f",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "ab5dcf8839791074",
+        "g": "92d44b9a0ccc0d5d",
+        "subscription": "c5b0190b901ecb86",
+        "path": "plc/app/Application/sym/PRG_Unit/emRobot/diStartCamera",
+        "name": "",
+        "inputs": 0,
+        "x": 240,
+        "y": 900,
+        "wires": [
+            [
+                "7d52a4ba16da2760"
+            ]
+        ]
+    },
+    {
+        "id": "7d52a4ba16da2760",
+        "type": "switch",
+        "z": "ab5dcf8839791074",
+        "g": "92d44b9a0ccc0d5d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 900,
+        "wires": [
+            [
+                "c30bc7f3c65ff458"
             ]
         ]
     },
